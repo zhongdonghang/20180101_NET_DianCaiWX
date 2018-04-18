@@ -32,22 +32,23 @@ namespace Web.Controllers
 
                 //return Content(SeatManage.SeatManageComm.AESAlgorithm.AESDecrypt(str));
                 string msg;//"Xgxsdicj/yZUDBzS4IAw6MnhIKiJTtjYUBodKmeYlrqVEtW4xthvjYoMKMRZOUeZluBkR1t0/mOhjQwSz6tgpw==";
-              
-               // AppWebService.BasicAPI.GetLibraryNowState("2014101603", out msg);
-                //J_GetSeatNowStatus seatStatus =  JSONSerializer.Deserialize<J_GetSeatNowStatus>(msg);
-                //AppWebService.BasicAPI.CancelBesapeakByCardNo("2014101603", "hhk", out msg);
-                //AppWebService.BasicAPI.GetRoomBesapeakState("2014101603", "101001", "2016-02-29", out msg);
-                //AppWebService.BasicAPI.GetSeatNowStatus("2014101603", "101001001", "101001", "hhk", out msg);
-                //J_GetSeatNowStatus entity = JSONSerializer.Deserialize<J_GetSeatNowStatus>(msg);
-                return Content(Convert.ToInt32("B").ToString());
-                //return Content(SeatManage.SeatManageComm.AESAlgorithm.AESEncrypt(str));
+
+            // AppWebService.BasicAPI.GetLibraryNowState("2014101603", out msg);
+            //J_GetSeatNowStatus seatStatus =  JSONSerializer.Deserialize<J_GetSeatNowStatus>(msg);
+            //AppWebService.BasicAPI.CancelBesapeakByCardNo("2014101603", "hhk", out msg);
+            //AppWebService.BasicAPI.GetRoomBesapeakState("2014101603", "101001", "2016-02-29", out msg);
+            //AppWebService.BasicAPI.GetSeatNowStatus("2014101603", "101001001", "101001", "hhk", out msg);
+            //J_GetSeatNowStatus entity = JSONSerializer.Deserialize<J_GetSeatNowStatus>(msg);
+            //return Content(Convert.ToInt32("B").ToString());
+            return Content("Hello");
+            //return Content(SeatManage.SeatManageComm.AESAlgorithm.AESEncrypt(str));
             //}
             //catch (Exception ex)
             //{
             //    return Content(ex.Message);
             //    //throw;
             //}
-            
+
 
 
         }

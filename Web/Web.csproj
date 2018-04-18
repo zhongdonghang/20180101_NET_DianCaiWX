@@ -130,6 +130,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Code\ScanScanSeatQRResult.cs" />
+    <Compile Include="Controllers\DCController.cs" />
     <Compile Include="Controllers\IndexController.cs" />
     <Compile Include="Controllers\OAuthController.cs" />
     <Compile Include="Controllers\SendMessageController.cs" />
@@ -349,6 +350,7 @@
     <Folder Include="Content\upload\image\20150414\" />
     <Folder Include="Content\upload\image\20150416\" />
     <Folder Include="Content\upload\image\20150421\" />
+    <Folder Include="Controllers\DC\" />
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
@@ -423,6 +425,7 @@
     <None Include="Properties\PublishProfiles\cw.pubxml" />
     <Content Include="Views\User\SelectSeat.cshtml" />
     <Content Include="Views\User\RecordQuery.cshtml" />
+    <Content Include="Views\DC\Test.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
