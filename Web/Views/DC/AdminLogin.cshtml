@@ -1,0 +1,105 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>AdminLogin</title>
+    <link href="/dist/css/frozen.css" rel="stylesheet" />
+</head>
+<body>
+    <div class="ui-tab ">
+        <ul class="ui-tab-nav ui-border-b ">
+            <li class="current"><span>登录</span></li>
+            <li><span>注册</span></li>
+        </ul>
+        <ul class="ui-tab-content" style="width:200%">
+            <li>
+                <div class="ui-form ui-border-t">
+                    <form action="">
+                        <div class="ui-form-item ui-border-b">
+                            <label>
+                                账号
+                            </label>
+                            <input type="text" id="LoginId" placeholder="账号/手机号码">
+                        </div>
+                        <div class="ui-form-item ui-border-b">
+                            <label>
+                                密码
+                            </label>
+                            <input type="password" id="LoginPass" placeholder="请输入密码">
+                        </div>
+                        <div class="ui-btn-wrap">
+                            <button class="ui-btn-lg ui-btn-primary" onclick="javascript: SubmitLogin();">
+                                确定
+                            </button>
+                            <br />
+                            <button class="ui-btn-lg ui-btn-primary" onclick="javascript: SubmitLogin();">
+                                微信登录
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </li>
+            <li>注册</li>
+        </ul>
+    </div>
+    <script src="/dist/lib/zepto.min.js"></script>
+    <script src="/dist/js/frozen.js"></script>
+    <script type='text/javascript' src='//g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='//g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script>
+        function SubmitLogin() {
+            var time;
+            if ($("#LoginId").val().trim().length == 0) {
+                alert("请输入登录账号");
+                return;
+            }
+            if ($("#LoginPass").val().trim().length == 0) {
+                alert("请输入登录密码");
+                return;
+            }
+
+          // $.showPreloader('正在登录')
+            //setTimeout(function () {
+            //    window.location.href = "/DC/SubmitAdminLogin";
+            //}, 2000);
+
+            //alert($("#hid_Time").val());
+            $.post("/DC/SubmitAdminLogin",
+                {
+                    LoginId: $("#LoginId").val(),
+                    LoginPass: $("#LoginPass").val()
+                },
+            function (data, textStatus) {
+                if (textStatus == "success") {
+                    
+                }
+                else {
+                    alert("操作失败！");
+                }
+            }, "json").error(function (XMLHttpRequest, textStatus, errorThrown) { alert(XMLHttpRequest + textStatus + errorThrown); });
+        }
+
+    </script>
+
+    <script>
+        (function () {
+            var tab = new fz.Scroll('.ui-tab', {
+                role: 'tab',
+                autoplay: false,
+                interval: 10000
+            });
+            /* 滑动开始前 */
+            tab.on('beforeScrollStart', function (fromIndex, toIndex) {
+                console.log(fromIndex, toIndex);// from 为当前页，to 为下一页
+            })
+        })();
+    </script>
+</body>
+</html>

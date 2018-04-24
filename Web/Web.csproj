@@ -426,6 +426,7 @@
     <Content Include="Views\User\SelectSeat.cshtml" />
     <Content Include="Views\User\RecordQuery.cshtml" />
     <Content Include="Views\DC\Test.cshtml" />
+    <Content Include="Views\DC\AdminLogin.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

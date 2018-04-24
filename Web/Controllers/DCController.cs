@@ -16,6 +16,20 @@ namespace Web.Controllers
             return View();
         }
 
+        [HttpPost]
+        public JsonResult SubmitAdminLogin(string LoginId,string LoginPass)
+        {
+           
+            return Json(new { status = "success", message = "ok" }, JsonRequestBehavior.AllowGet);
+        }
+
+
+       
+        public ActionResult AdminLogin()
+        {
+            return View();
+        }
+
         public ActionResult Test()
         {
 
